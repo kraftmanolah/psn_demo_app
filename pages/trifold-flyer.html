@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trifold Flyer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/png" href="/assets/img/psn_logo.png">
+    <style>
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .horizontal-scroll .card {
+            flex: 0 0 auto;
+            white-space: normal;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-group button {
+            width: 40px;
+            height: 40px;
+        }
+
+        .input-group input {
+            max-width: 100px;
+            text-align: center;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/assets/img/trifold1.jpg" class="d-block w-100" alt="Trifold Flyer 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/trifold2.jpg" class="d-block w-100" alt="Trifold Flyer 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/trifold3.jpg" class="d-block w-100" alt="Trifold Flyer 3">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="pt-2">Trifold Flyer</h2>
+                <p>₦40,000 for 100 pieces</p>
+                <p>High-quality trifold flyers perfect for promoting your business or event.</p>
+                
+                <form action="/pages/trifold-summary.html" method="POST">
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Select Quantity</label>
+                        <div class="input-group">
+                            <button type="button" class="btn btn-outline-secondary" id="decrement">-</button>
+                            <input type="text" class="form-control text-center" id="quantity" name="quantity" value="100">
+                            <button type="button" class="btn btn-outline-secondary" id="increment">+</button>
+                        </div>
+                    </div>
+                    <a href="/pages/trifold-summary.html" class="btn btn-primary">Order Now</a>
+                </form>
+            </div>                
+        </div>
+    </div>
+
+    <section class="also-viewed py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center pb-4">Customers Also Viewed</h2>
+            <div class="horizontal-scroll d-flex">
+                <div class="card me-3" style="width: 18rem;">
+                    <img src="/assets/img/mug.jpg" class="card-img-top" alt="Also Viewed Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Also Viewed 1</h5>
+                        <p class="card-text">Brief description of Also Viewed 1.</p>
+                        <a href="/product-details.html" class="btn btn-primary">View Product</a>
+                    </div>
+                </div>
+                <div class="card me-3" style="width: 18rem;">
+                    <img src="/assets/img/flyers.jpg" class="card-img-top" alt="Also Viewed Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Also Viewed 2</h5>
+                        <p class="card-text">Brief description of Also Viewed 2.</p>
+                        <a href="/product-details.html" class="btn btn-primary">View Product</a>
+                    </div>
+                </div>
+                <div class="card me-3" style="width: 18rem;">
+                    <img src="/assets/img/journals.jpg" class="card-img-top" alt="Also Viewed Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Also Viewed 3</h5>
+                        <p class="card-text">Brief description of Also Viewed 3.</p>
+                        <a href="/product-details.html" class="btn btn-primary">View Product</a>
+                    </div>
+                </div>
+                <div class="card me-3" style="width: 18rem;"></div>
+                    <img src="/assets/img/reflective-jacket.jpg" class="card-img-top" alt="Also Viewed Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Also Viewed 3</h5>
+                        <p class="card-text">Brief description of Also Viewed 3.</p>
+                        <a href="/product-details.html" class="btn btn-primary">View Product</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials py-5"></section>
+        <div class="container">
+            <h2 class="text-center">Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="/assets/img/first-cl.jpg" class="card-img-top" alt="Customer 1">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Excellent service and great quality!</p>
+                                <footer class="blockquote-footer">Ms. Tife</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="/assets/img/second-cl.jpg" class="card-img-top" alt="Customer 2">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Highly recommend PrintShop Naija.</p>
+                                <footer class="blockquote-footer">Mr. Fawaz</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="/assets/img/third-cl.jpg" class="card-img-top" alt="Customer 3">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Fast and reliable service. Nice service</p>
+                                <footer class="blockquote-footer">Ms. Dolapo</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/increment-100.js"></script>
+</body>
+</html>
