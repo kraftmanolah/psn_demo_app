@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px; /* or your preferred size */
+}
+
+form {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px; /* or your preferred size */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* or your preferred weight */
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* or your preferred weight */
+}
+
+/* Adjustments for specific sections to ensure readability */
+
+
+.hero {
+    background-image: url('/assets/img/hero-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+    min-height: 400px; 
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.introduction {
+    color: black; /* Ensure text is readable */
+}
+
+/* Custom styles for the About Us section */
+.introduction .row {
+    margin-bottom: 2rem;
+}
+
+.introduction img {
+    max-width: 100%;
+    height: auto;
+}
+
+.print-shop-underline {
+    text-decoration: underline greenyellow;
+}
+
+.services-underline {
+    
+    color: greenyellow;
+}
+
+.naija {
+    color: greenyellow;
+    text-shadow: 1px 1px 2px black;
+}
+
+.introduction h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.introduction p {
+    margin-bottom: 0;
+}
+
+.introduction i {
+    color: black; /* Magenta color for icons */
+}
+
+
+
+
+.footer {
+    background-color: rgb(238, 237, 235); /* Ensure footer section blends with the overall background */
+}
+
+footer a {
+    color: black;
+    margin: 0 10px;
+}
+
+.icon-image {
+    transition: filter 0.3s ease; /* Smooth transition on filter property */
+}
+
+.icon-image:hover {
+    filter: brightness(0.8) saturate(120%) hue-rotate(180deg) drop-shadow(0 0 0.75rem blue); /* Example: blue color overlay effect */
+}
+
+
+.navbar, .contact {
+    color: black;
+}
+
+
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: black; /* Adjust navbar link color for readability */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #FF00FF; /* Magenta */
+}
+
+.btn-outline-success {
+    color: yellow;
+    border-color: yellow;
+}
+
+.btn-primary {
+    background-color: white; 
+    border-color: white;
+    color: black;
+}
+
+.btn-secondary {
+    background-color: yellow; 
+    border-color: yellow;
+    color: black;
+}
+/*Testimonial Carousel Start*/
+.testimonial-slide {
+    display: none;
+  }
+  .testimonial-slide.active {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .testimonial-item {
+    text-align: center;
+    flex: 1 0 30%;
+    margin: 10px;
+  }
+  .testimonial-item img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .testimonial-item p {
+    font-size: 14px;
+  }
+  .slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  @media (max-width: 767px) {
+    .testimonial-item {
+      flex: 1 0 100%;
+    }
+  }
+
+  /*End*/
+
+.testimonials .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.testimonials .card-img-top {
+    border-radius: 50%;
+    height: 80px; /* Adjust height as needed */
+    width: 80px; /* Adjust width as needed */
+    object-fit: cover; /* Ensures the image covers the entire space */
+}
+
+.testimonials blockquote {
+    margin: 0;
+    padding: 0.5em;
+    background-color: #f8f9fa;
+    border-left: 5px solid #00FFFF; /* Cyan */
+}
+
+.card {
+    color: black;
+}
+
+/* Animation section */
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility classes for animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Adding delay to make animation more smooth */
+.fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Keyframes for slide-in-left animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Utility classes for slide-in-left animation */
+.slide-in-left {
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Keyframes for slide-in-right animation */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Utility classes for slide-in-right animation */
+.slide-in-right {
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+
+/* Basic styling for FAQ section on home page */
+
+
+/* Contact us page style */
+
+        
+        .contact-info {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .contact-info .fa {
+            margin-right: 10px;
+        }
+        .follow-us {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .follow-us .fa {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .customer-support {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .customer-support .fa {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .business-hours {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .business-hours .fa {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+
+        /* FAQ Styles */
+
+        .faq-section {
+            background-color: #f8f9fa;
+        }
+        
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: bold;
+            background: none;
+            border: none;
+            color: #333;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .faq-question:focus, .faq-question:hover {
+            outline: none;
+            text-decoration: none;
+        }
+
+        .faq-question .fas {
+            margin-right: 5px;
+        }
+
+
+        /* Services Page Style*/
+
+        .category-header {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .service-card {
+            margin-bottom: 30px;
+        }
+
+        .service-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card h5 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            margin-bottom: 10px;
+        }
+
+        .sub-category-list {
+            list-style-type: none; 
+            padding: 0;
+        }
+
+        .sub-category-list li {
+            margin-bottom: 5px;
+        }
+
+        .sub-category-list li::before {
+            display: none;
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .category-description {
+            margin-bottom: 20px;
+        }
+
+        .subcategory-gallery {
+            margin-top: 50px;
+        }
+
+        .subcategory-gallery img {
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .subcategory-gallery h5 {
+            margin-top: 15px;
+        }
+
+        .sub-category-img-border {
+            border-radius: 5px;
+        }
+
+        /* Trusted Companies */
+
+        .trusted-companies {
+            background-color: #f8f9fa; /* Light background color */
+        }
+        
+        .company-logo {
+            max-height: 100px; /* Adjust the height as needed */
+            margin: 20px auto; /* Center align the logos with some spacing */
+        }
+        
+        @media (max-width: 768px) {
+            .company-logo {
+                max-height: 80px; /* Adjust height for smaller screens */
+            }
+        }
+        
+
+        /* Form */
+
+       /* Modal styles */
+/* Modal Header */
+.modal-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Form Elements */
+.modal-body {
+    padding: 2rem;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control, .form-select, .btn {
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Modal Footer */
+.modal-footer {
+    justify-content: center;
+    padding: 1rem;
+}
+
+.custom-carousel {
+    width: 90%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the carousel */
+}
+
+
+
+.custom-carousel .carousel-inner img {
+    object-fit: cover; /* Ensure images cover the carousel area */
+    height: 400px; /* Make sure image height fits carousel */
+}
+
+
+        .custom-carousel .carousel-caption {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+ 
